@@ -1,0 +1,15 @@
+flutter my sql project
+
+Step 1 : Create a flutter application
+Step 2:  Make a project in xamp folder an amke Apis
+Step 3 : Make a DATABASE IN MYSQL
+Step 4:  Now go to flutter project and connect flutter with apis by writing through this code by using hhtp library and also import this libarary in that file(
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+addEditData() async {
+    final response = await http.post(Uri.parse("http://192.168.100.11/flutter_php_crud/add_contact.php"), body: {
+        'name' : nameController.text,
+        'phone' : phoneController.text,
+        'address' : addressController.text,
+    });
